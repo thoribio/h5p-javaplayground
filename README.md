@@ -23,20 +23,13 @@ El proyecto se compone de tres piezas principales:
 - `javaplayground-runner/`  
   Microservicio Spring Boot que expone `POST /run` y ejecuta el código Java (compilación con `javac` y ejecución dentro de `nsjail`).
 
-- `deploy/`  
-  Ejemplos de despliegue:
-  - `systemd/javaplayground-runner.service.example`
-
-- `docs/`  
-  Documentación auxiliar (arquitectura, despliegue, notas de seguridad).
-
 ## Componentes y flujo
 
 1. El usuario interactúa con el editor H5P (CodeMirror).
 2. El botón **Ejecutar** llama al endpoint Drupal: `POST /h5p/javaplayground/run`.
 3. Drupal (módulo `javaplayground_bridge`) reenvía la solicitud al JavaRunner (`POST /run`) incluyendo un secreto compartido opcional.
 4. El JavaRunner compila/ejecuta y devuelve un JSON con `status`, `stdout`, `stderr`, `compileOutput`.
-5. El botón **Enviar** guarda el código y resultado en Drupal mediante `POST /h5p/javaplayground/xapi` (módulo `javaplayground_xapi`) usando CSRF token.
+5. El botón **Enviar** guarda el código y resultado en Drupal mediante `POST /h5p/javaplayground/xapi` (módulo `javaplayground_xapi`).
 
 ## Requisitos (alto nivel)
 
@@ -52,12 +45,9 @@ El proyecto se compone de tres piezas principales:
 ### Secreto compartido (opcional)
 El runner valida el header `X-JP-Secret` cuando existe configuración de secreto.
 
-Ejemplo con systemd (ver `deploy/systemd/javaplayground-runner.service.example`):
+El SHARED_SECRET se almacena en una variable de entorno del servidor.
 
 - `JAVAPLAYGROUND_SHARED_SECRET=CHANGE_ME`
-
-En Drupal, el módulo `javaplayground_bridge` incluye configuración equivalente en:
-- `config/install/javaplayground_bridge.settings.yml.example`
 
 ### Notas de seguridad
 El JavaRunner ejecuta el código dentro de `nsjail` con:
