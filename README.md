@@ -31,7 +31,7 @@ El proyecto se compone de tres piezas principales:
 4. El JavaRunner compila/ejecuta y devuelve un JSON con `status`, `stdout`, `stderr`, `compileOutput`.
 5. El botón **Enviar** guarda el código y resultado en Drupal mediante `POST /h5p/javaplayground/xapi` (módulo `javaplayground_xapi`).
 
-## Requisitos (alto nivel)
+## Requisitos
 
 - Drupal 10 + H5P
 - PHP 8.x
@@ -40,10 +40,8 @@ El proyecto se compone de tres piezas principales:
 - `nsjail` instalado en el host del runner
 - Usuario de sistema dedicado (por ejemplo `javaplayground-api` y/o `javaplayground`)
 
-## Configuración (resumen)
-
-### Secreto compartido (opcional)
-El runner valida el header `X-JP-Secret` cuando existe configuración de secreto.
+### Secreto compartido 
+El runner valida el header `X-JP-Secret`.
 
 El SHARED_SECRET se almacena en una variable de entorno del servidor.
 
