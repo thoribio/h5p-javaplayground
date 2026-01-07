@@ -1,0 +1,24 @@
+.h5p-java-playground .jp-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.h5p-java-playground .jp-output {
+  background: #f6f8fa;
+  border: 1px solid #ddd;
+  padding: 8px;
+  white-space: pre-wrap;
+}
+
+.h5p-java-playground .jp-status {
+  color: green;
+  margin-top: 10px;
+}
+
+/* Asegura una apariencia correcta del editor */
+.h5p-java-playground .CodeMirror {
+  border: 1px solid #ccc;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-size: 13px;
+}

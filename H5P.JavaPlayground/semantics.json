@@ -1,0 +1,61 @@
+[
+  {
+    "name": "defaultCode",
+    "type": "text",
+    "widget": "textarea",
+    "label": "Codigo Java inicial",
+    "description": "Codigo que aparecera por defecto en el editor.",
+    "default": "public class Main {\n  public static void main(String[] args) {\n    System.out.println(\"Hola mundo\");\n  }\n}\n"
+  },
+  {
+    "name": "theme",
+    "type": "select",
+    "label": "Tema del editor (CodeMirror)",
+    "description": "Tema visual del editor.",
+    "options": [
+      { "value": "default", "label": "Default" },
+      { "value": "eclipse", "label": "Eclipse" },
+      { "value": "darcula", "label": "Darcula" },
+      { "value": "blackboard", "label": "BlackBoard" }
+    ],
+    "default": "eclipse"
+  },
+  {
+  "name": "editorHeight",
+  "type": "number",
+  "label": "Altura del editor (px)",
+  "description": "Altura del editor CodeMirror en pixeles.",
+  "default": 300,
+  "min": 150,
+  "max": 900,
+  "step": 10
+  },
+  {
+    "name": "showRunButton",
+    "type": "boolean",
+    "label": "Mostrar boton Ejecutar",
+    "description": "Si se desactiva, el alumnado no podra compilar/ejecutar el codigo.",
+    "default": true
+  },
+  {
+    "name": "runButtonLabel",
+    "type": "text",
+    "label": "Texto del boton Ejecutar",
+    "description": "Etiqueta del boton de compilacion/ejecucion.",
+    "default": "Ejecutar codigo"
+  },
+  {
+    "name": "showSendButton",
+    "type": "boolean",
+    "label": "Mostrar boton Enviar",
+    "description": "Si se desactiva, el alumnado no podra entregar el codigo y el resultado.",
+    "default": true
+  },
+  {
+    "name": "sendButtonLabel",
+    "type": "text",
+    "label": "Texto del boton Enviar",
+    "description": "Etiqueta del boton de entrega.",
+    "default": "Enviar codigo y resultado"
+  }
+]

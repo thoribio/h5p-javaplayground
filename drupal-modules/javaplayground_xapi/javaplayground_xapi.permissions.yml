@@ -1,0 +1,10 @@
+# Permiso para los para  escribir resultados de ejecucion
+save javaplayground results:
+  title: 'Guardar resultados de JavaPlayground'
+  description: 'Permite guardar los resultados de ejecución enviados desde H5P.JavaPlayground.'
+
+# Permiso para para ver los resultados
+view all javaplayground results:
+  title: 'Ver TODOS los resultados'
+  description: 'Permite acceder a todos los resultados almacenados del recurso JavaPlayground.'
+  restrict access: true # Esto pone un aviso que es un permiso sensible

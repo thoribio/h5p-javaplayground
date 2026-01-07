@@ -1,0 +1,65 @@
+<?php
+
+/**
+ * @file
+ * Archivo Install para el almacenaje JavaPlayground xAPI .
+ */
+
+function javaplayground_xapi_schema() {
+  $schema['javaplayground_result'] = [
+    'description' => 'Resultados de ejecucion del H5P JavaPlayground.',
+    'fields' => [
+      'id' => [
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ],
+      'uid' => [
+        'description' => 'Usuario que ejecuta el codigo.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ],
+      'nid' => [
+        'description' => 'Nodo donde esta incrustado el H5P.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => FALSE,
+      ],
+      'content_id' => [
+        'description' => 'ID de contenido H5P (contentId).',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => FALSE,
+      ],
+      'code' => [
+               'description' => 'Codigo fuente enviado.',
+        'type' => 'text',
+        'size' => 'big',
+        'not null' => FALSE,
+      ],
+      'output' => [
+        'description' => 'Resultado de la consola.',
+        'type' => 'text',
+        'size' => 'big',
+        'not null' => FALSE,
+      ],
+      'created' => [
+        'description' => 'Marca de tiempo UNIX de la ejecucion.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ],
+    ],
+    'primary key' => ['id'],
+    'indexes' => [
+      'uid' => ['uid'],
+      'nid' => ['nid'],
+      'content_id' => ['content_id'],
+    ],
+  ];
+
+  return $schema;
+}

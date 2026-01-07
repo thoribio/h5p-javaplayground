@@ -1,0 +1,20 @@
+# Esquema para que Drupal sepa que configuracion tiene el javaplayground_bridge // por ahora no lo empleo 
+javaplayground_bridge.settings:
+  type: config_object
+  label: 'JavaPlayground Bridge settings'
+  mapping:
+    runner_base_url:
+      type: string
+      label: 'Runner base URL'
+    shared_secret:
+      type: string
+      label: 'Shared secret for runner authentication'
+    verify_tls:
+      type: boolean
+      label: 'Verify TLS certificate'
+    timeout_seconds:
+      type: integer
+      label: 'Request timeout (seconds)'
+    connect_timeout_seconds:
+      type: integer
+      label: 'Connect timeout (seconds)'

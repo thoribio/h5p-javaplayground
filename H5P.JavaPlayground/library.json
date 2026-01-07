@@ -1,0 +1,23 @@
+{
+  "title": "Java Playground",
+  "machineName": "H5P.JavaPlayground",
+  "majorVersion": 2,
+  "minorVersion": 0,
+  "patchVersion": 29,
+  "runnable": true,
+
+  "coreApi": { "majorVersion": 1, "minorVersion": 24 },
+
+  "preloadedCss": [
+    { "path": "vendor/codemirror/lib/codemirror.css" },
+    { "path": "vendor/codemirror/theme/eclipse.css" },
+    { "path": "vendor/codemirror/theme/darcula.css" },
+    { "path": "vendor/codemirror/theme/blackboard.css" },
+    { "path": "styles/style.css" }
+  ],
+  "preloadedJs": [
+    { "path": "vendor/codemirror/lib/codemirror.js" },
+    { "path": "vendor/codemirror/mode/clike/clike.js" },
+    { "path": "JavaPlayground.js" }
+  ]
+}

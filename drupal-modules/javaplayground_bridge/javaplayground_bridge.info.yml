@@ -1,0 +1,6 @@
+name: 'JavaPlayground Bridge'
+type: module
+description: 'Endpoint puente entre H5P.JavaPlayground y el servicio externo JavaRunner para compilacion/ejecucion.'
+core_version_requirement: '^10'
+package: 'Custom'
+version: '1.0.0'

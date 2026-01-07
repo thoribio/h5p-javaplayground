@@ -1,0 +1,7 @@
+javaplayground_bridge.run:
+  path: '/h5p/javaplayground/run'
+  defaults:
+    _controller: '\Drupal\javaplayground_bridge\Controller\JavaPlaygroundController::run'
+  requirements:
+    _permission: 'send javaplayground code'
+  methods: [POST]

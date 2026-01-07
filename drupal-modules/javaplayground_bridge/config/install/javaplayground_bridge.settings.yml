@@ -1,0 +1,7 @@
+# Configuracion por defecto del Endpoint bridge hacia el microservicio JavaRunner
+runner_base_url: 'http://localhost:8080'
+shared_secret: 'CAMBIA_ME'
+# verify_tls para Https.
+verify_tls: true
+timeout_seconds: 5
+connect_timeout_seconds: 2

@@ -1,0 +1,4 @@
+# Permiso para los alumnos para que puedan enviar codigo al JavaRunner
+send javaplayground code:
+  title: 'Enviar el codigo al JavaRunner'
+  description: 'Permite a los enviar codigo al servicio de execucion externo.'

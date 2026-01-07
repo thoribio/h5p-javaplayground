@@ -1,0 +1,5 @@
+# Drupal usa Guzzle como su cliente http por defecto
+services:
+  javaplayground_bridge.runner_client:
+    class: Drupal\javaplayground_bridge\Service\RunnerClient
+    arguments: ['@http_client', '@config.factory']

@@ -1,0 +1,9 @@
+javaplayground_xapi.store:
+  path: '/h5p/javaplayground/xapi'
+  defaults:
+    _controller: '\Drupal\javaplayground_xapi\Controller\ResultController::store'
+  requirements:
+    _permission: 'save javaplayground results'
+  methods: [POST]
+  options:
+    _csrf_token: TRUE

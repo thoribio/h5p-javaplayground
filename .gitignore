@@ -1,0 +1,13 @@
+# Java / Maven
+javaplayground-runner/target/
+*.class
+*.log
+
+# IDEs
+.idea/
+.vscode/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db

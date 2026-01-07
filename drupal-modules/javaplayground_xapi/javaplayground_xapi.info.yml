@@ -1,0 +1,6 @@
+name: 'JavaPlayground xAPI storage'
+type: module
+description: 'Guarda en BD las ejecuciones del H5P JavaPlayground.'
+package: Custom
+core_version_requirement: ^10
+version: 1.0
