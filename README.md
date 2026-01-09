@@ -45,7 +45,7 @@ El runner valida el header `X-JP-Secret`.
 
 El SHARED_SECRET se almacena en una variable de entorno del servidor.
 
-- `JAVAPLAYGROUND_SHARED_SECRET=CHANGE_ME`
+- `JAVAPLAYGROUND_SHARED_SECRET=CAMBIA_ME`
 
 ### Notas de seguridad
 El JavaRunner ejecuta el código dentro de `nsjail` con:
